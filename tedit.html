@@ -1,0 +1,32 @@
+<html>
+<style type="text/css">
+a {color:green; text-decoration:none;}
+body { margin: 0; padding: 0; background-color:black; }
+iframe { margin: 0; padding: 0; border:none;}
+.nav {background-color:green; position: fixed; bottom: 0px; height: 4%; width:100%;background-color: #F5F5F5;border: 1px solid #CCCCCC; min-height:30px;}
+</style>
+<iframe id="frame1" src="tedit.php" style="width:49%; height:96%;"></iframe>
+<iframe id="frame2" src="tedit.php" style="width:49%; height: 96%;"></iframe>
+<div class="nav" >
+<input type="range" id="range" min="0" max="100" value="50" style="width:98%;" onchange="showValue(this.value)" />
+<div align="center" style="width:98%;">
+(<a onClick="equalize()" href="#">~Equalize~</a>)
+<!--Screens: (<a href="#">1</a>) (<a href="#">2</a>)--></div></div>
+</html>
+
+<script type="text/javascript">
+function showValue(newValue)
+{
+        awesomeValue1=(newValue-1) + "%";
+        awesomeValue2=(100-newValue-1) + "%";
+        document.getElementById("frame1").style.width=awesomeValue1;
+        document.getElementById("frame2").style.width=awesomeValue2;
+}
+function equalize()
+{
+        document.getElementById("range").value=50;
+        document.getElementById("frame1").style.width="49%";
+        document.getElementById("frame2").style.width="49%";
+}
+</script>
+
