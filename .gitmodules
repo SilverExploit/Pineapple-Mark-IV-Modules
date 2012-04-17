@@ -1,0 +1,3 @@
+[submodule "Pineapple-Mark-IV-Modules"]
+	path = Pineapple-Mark-IV-Modules
+	url = git@github.com:SilverExploit/Pineapple-Mark-IV-Modules.git
